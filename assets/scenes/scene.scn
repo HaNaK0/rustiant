@@ -1,0 +1,76 @@
+(
+  resources: {},
+  entities: {
+    2: (
+      components: {
+        "bevy_transform::components::transform::Transform": (
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+          rotation: (0.0, 0.0, 0.0, 1.0),
+          scale: (
+            x: 1.0,
+            y: 1.0,
+            z: 1.0,
+          ),
+        ),
+        "bevy_transform::components::global_transform::GlobalTransform": ((
+          matrix3: (
+            x_axis: (
+              x: 1.0,
+              y: 0.0,
+              z: 0.0,
+            ),
+            y_axis: (
+              x: 0.0,
+              y: 1.0,
+              z: 0.0,
+            ),
+            z_axis: (
+              x: 0.0,
+              y: 0.0,
+              z: 1.0,
+            ),
+          ),
+          translation: (
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+          ),
+        )),
+        "bevy_sprite::sprite::Sprite": (
+          color: Rgba(
+            red: 1.0,
+            green: 1.0,
+            blue: 1.0,
+            alpha: 1.0,
+          ),
+          flip_x: false,
+          flip_y: false,
+          custom_size: None,
+          rect: None,
+          anchor: Center,
+        ),
+        "bevy_asset::handle::Handle<bevy_render::texture::image::Image>": (
+          id: AssetPathId(((8119521944551570063), (8823233378563626002))),
+        ),
+        "bevy_render::view::visibility::Visibility": Inherited,
+        "rustiant::Savable": (),
+        "bevy_render::primitives::Aabb": (
+          center: (
+            x: -0.0,
+            y: -0.0,
+            z: 0.0,
+          ),
+          half_extents: (
+            x: 128.0,
+            y: 128.0,
+            z: 0.0,
+          ),
+        ),
+      },
+    ),
+  },
+)
