@@ -5,7 +5,8 @@ use bevy::{prelude::*, tasks::IoTaskPool};
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
-        .add_systems(Startup, setup)
+        //.add_systems(Startup, setup)
+        .add_systems(Startup, load)
         .add_systems(Update, save)
         .register_type::<Savable>()
         .run();
@@ -53,8 +54,14 @@ fn save(
         .detach();
 }
 
-fn load() {
-    
+fn load(mut commands: Commands, asset_server: Res<AssetServer>) {
+    info!("Loading");
+
+    commands.spawn(Camera2dBundle::default());
+    commands.spawn(DynamicSceneBundle {
+        scene: asset_server.load("scenes/scene.scn"),
+        ..default()
+    });
 }
 
 
