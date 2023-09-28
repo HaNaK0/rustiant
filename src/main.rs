@@ -3,10 +3,12 @@ use bevy::{
 };
 use bevy_inspector_egui::quick::WorldInspectorPlugin;
 use pig::PigPlugin;
+use room_loading::{RoomTag, RoomLoadingPlugin};
 use ui::GameUiPlugin;
 
 mod pig;
 mod ui;
+mod room_loading;
 
 #[derive(Component)]
 struct Player {
@@ -31,6 +33,7 @@ fn main() {
             PigPlugin,
             WorldInspectorPlugin::default().run_if(input_toggle_active(true, KeyCode::F3)),
             GameUiPlugin,
+            RoomLoadingPlugin,
         ))
         .add_systems(Startup, setup)
         .add_systems(Update, movement_system)
@@ -58,6 +61,7 @@ fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
         },
         Player { speed: 300.0 },
         Name::new("Player"),
+        RoomTag,
     ));
 }
 
