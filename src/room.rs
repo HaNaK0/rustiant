@@ -154,11 +154,11 @@ fn parse_room_system(
                             registry.update(
                                 &new_prefab.prefab_type,
                                 changed_fields,
-                                commands.entity(entity.clone()),
+                                commands.entity(*entity),
                                 &asset_server,
                             );
 
-                            (id.clone(), (entity.clone(), new_prefab.clone()))
+                            (id.clone(), (*entity, new_prefab.clone()))
                         }
                         None => {
                             let commands = commands.spawn_empty();

@@ -2,7 +2,7 @@ use std::time::Duration;
 
 use bevy::{
     asset::ChangeWatcher, input::common_conditions::input_toggle_active, prelude::*,
-    render::camera::ScalingMode, ecs::entity,
+    render::camera::ScalingMode,
 };
 use bevy_inspector_egui::quick::WorldInspectorPlugin;
 use pig::PigPlugin;
